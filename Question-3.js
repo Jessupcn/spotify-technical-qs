@@ -19,7 +19,7 @@ function changePossibilities(amount, denominations){
     let newAmount = amount - denomination;
     if (newAmount === 0){
       // Add to the count if the newAmount is exactly 0.
-      count++
+      count++;
     } else if (newAmount > 0){
       /* Filter denominations array to only those greater than or equal to
       the current denomination loop we are in. This cuts down on iterations
@@ -28,7 +28,7 @@ function changePossibilities(amount, denominations){
         if (elem >= denomination) return elem;
       });
       // Add the count from the recursive calls' returns
-      count += changePossibilities(newAmount, newDenoms)
+      count += changePossibilities(newAmount, newDenoms);
     }
   });
   return count;
