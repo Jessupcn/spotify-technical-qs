@@ -29,7 +29,7 @@ function decodeString(s){
       }
     }
   }
-  // if theres a inner nest, recursively call on a more nested substring.
+  // if theres a inner nest, recursively call on the next nested substring.
   if (s[s.length - 1] === ']'){
     newConcat = decodeString(s.slice(s.indexOf('[') + 1, -1))
   } else {

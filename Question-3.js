@@ -18,16 +18,16 @@ function changePossibilities(amount, denominations){
   denominations.forEach(denomination => {
     let newAmount = amount - denomination;
     if (newAmount === 0){
-      // if the newAmount is exactly 0, this is a good combination, add to the count
+      // Add to the count if the newAmount is exactly 0.
       count++
     } else if (newAmount > 0){
-      /* filter denominations array to only those greater than or equal to
+      /* Filter denominations array to only those greater than or equal to
       the current denomination loop we are in. This cuts down on iterations
       and eliminates repeat combinations */
       let newDenoms = denominations.filter(elem => {
         if (elem >= denomination) return elem;
       });
-      // add the count from the recursive calls' returns
+      // Add the count from the recursive calls' returns
       count += changePossibilities(newAmount, newDenoms)
     }
   });
