@@ -2,10 +2,16 @@
 * Question 3 -- changePossibilities
 */
 
-/*
-* refactored solution, passing in a filtered denomination array into the recursive calls
-* we cut down on number of iterations needed and double counting of identical combinations.
-*/
+/**
+ * Takes a target amount and array of coin denominations and returns the number
+ * of possible combinations that combine to reach the target.
+ *
+ * @param amount - target amount.
+ * @param denominations - array of coin values avaiable to add to reach amount.
+ *
+ * @return the total number of combinations of coin denominations that
+ * can be used to reach the amount.
+ */
 
 function changePossibilities(amount, denominations){
   let count = 0;

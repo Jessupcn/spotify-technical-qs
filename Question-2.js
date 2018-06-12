@@ -2,6 +2,15 @@
 * Question 2 -- decodeString
 */
 
+/**
+ * decodes a string based on a certain formula of various subsections
+ * being repeated multiple times.
+ *
+ * @param s - the string to decode
+ *
+ * @return a decoded string based on the passed in string.
+ */
+
 function decodeString(s){
   let returnStr = '';
   let num = '';
